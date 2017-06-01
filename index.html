@@ -4,8 +4,8 @@
         <title>Okky Permana - Jalan Veteran 7/21 Kebomas, Gresik</title>
         <style>
             #map {
-                height: 500px;
-                width: 100%;
+                height: 500px; /* Tinggi DIV Container */
+                width: 100%; /* Lebar DIV Container */
             }
         </style>
     </head>
@@ -14,14 +14,17 @@
         <div id="map"></div>
         <script>
             function initMap() {
-                var kebomas = {lat: -7.176578, lng: 112.651955};
+                var kebomas = {
+                    lat: -7.176578, /* Longitude Peta */
+                    lng: 112.651955 /* Latitude Peta */
+                };
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 16,
+                    zoom: 16, /* Zoom Factor */
                     center: kebomas
                 });
                 var marker = new google.maps.Marker({
                     position: kebomas,
-                    icon: "photo.png",
+                    icon: "photo.png", /* Ikon Marker Peta */
                     map: map
                 });
             }
